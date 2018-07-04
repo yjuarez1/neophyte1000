@@ -1,0 +1,10 @@
+dependencies {
+    def appCenterSdkVersion = '1.6.1'
+    compile "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+}
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+AppCenter.start(getApplication(), "122df1e0-4441-42e3-86c3-4b42b4c52235",
+                  Analytics.class, Crashes.class);
